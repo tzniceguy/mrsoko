@@ -1,6 +1,16 @@
 import Image from "next/image";
 
-export default function Testimonial() {
+interface TestimonialProps {
+  name: string;
+  rating: number;
+  testimonial: string;
+}
+
+export default function Testimonial({
+  name,
+  rating,
+  testimonial,
+}: TestimonialProps) {
   return (
     <div className="rounded border-2 border-cyan-100 p-2 h-full">
       <div className="flex border-2">
@@ -14,17 +24,12 @@ export default function Testimonial() {
           />
         </div>
         <div className="text-center ">
-          <span className="text-center block">John Doe</span>
-          <span>ratings</span>
+          <span className="text-center block">{name}</span>
+          <span>{rating}</span>
         </div>
       </div>
       <div>
-        <p>
-          loreum ipsum dolor sit amet, consectetur adipiscing elit sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <p className="leading-6">{testimonial}</p>
       </div>
     </div>
   );
