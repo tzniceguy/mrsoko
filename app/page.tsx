@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import NavBar from "./components/NavBar";
+import WhatToExpect from "./components/WhatToExpect";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <NavBar />
       <Hero />
       <HowItWorks />
+      <WhatToExpect />
     </main>
   );
 }
