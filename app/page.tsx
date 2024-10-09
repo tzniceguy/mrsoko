@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import NavBar from "./components/NavBar";
+import Testimonials from "./components/Testimonials";
 import WhatToExpect from "./components/WhatToExpect";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <HowItWorks />
       <WhatToExpect />
+      <Testimonials />
     </main>
   );
 }
