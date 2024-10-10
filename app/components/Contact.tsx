@@ -1,15 +1,15 @@
 import Input from "./Input";
 import MessageBox from "./Messagebox";
-import Messagebox from "./Messagebox";
+
 export default function Contact() {
   return (
     <div className="h-screen p-6">
-      <h1 className="text-2xl text-center md:text-4xl">
+      <h1 className="text-2xl md:text-4xl">
         Do you still have questions? Reach out to us for futher assistance we
         are here to help
       </h1>
-      <div className="md:grid md:grid-cols-2">
-        <div className="">
+      <div className="md:grid md:grid-cols-2 gap-8">
+        <div className="h-full">
           <div className="block">
             <label>Your Name</label>
             <Input type="name" placeholder="name" />
@@ -21,6 +21,17 @@ export default function Contact() {
           <div>
             <label>Message</label>
             <MessageBox />
+          </div>
+          <button className="p-2 bg-orange-400 rounded text-black">
+            Send Message
+          </button>
+        </div>
+        <div>
+          <div></div>
+          <div className="space-y-5">
+            <h3>Kisauni, Zanzibar</h3>
+            <h3>Phone: +255 777 777 777</h3>
+            <h3>Email:mrsoko@gmail.com</h3>
           </div>
         </div>
       </div>
