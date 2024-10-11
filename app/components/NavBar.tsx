@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
+
 export default function NavBar() {
   //navigation bar links
   const navlinks = [
@@ -20,9 +22,9 @@ export default function NavBar() {
   };
 
   return (
-    <div>
-      <nav className="md:flex gap-4">
-        <div>
+    <div className="relative">
+      <nav className="md:flex items-center justify-between gap-4 border-b border-sky-100">
+        <div className="flex items-center justify-between w-full md:w-auto">
           <Image
             className="dark:invert"
             src="/groceries-round-svgrepo-com.svg"
@@ -31,33 +33,31 @@ export default function NavBar() {
             height={0}
             priority
           />
-        </div>
-        <div className="">
-          <div className="absolute top-4 right-4 md:hidden">
-            <button
-              onClick={toggleNav}
-              className={`absolute top-4 right-4 md:hidden ${navOpen ? "hidden" : "block"}`}
-            >
-              <RxHamburgerMenu className="text-4xl" />
-            </button>
-            <button
-              onClick={toggleNav}
-              className={`absolute top-6 right-4 md:hidden ${navOpen ? "block" : "hidden"}`}
-            >
+          <button onClick={toggleNav} className="md:hidden text-4xl">
+            {navOpen ? (
               <IoCloseSharp className="text-4xl" />
-            </button>
-          </div>
-          <div
-            className={`md:block md:right-12 md:absolute ${navOpen ? "block" : "hidden"}`}
-          >
-            <ul className="text-md md:flex md:space-x-4 lowercase">
-              {navlinks.map((link) => (
-                <li key={link.title}>
-                  <a href={link.path}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+            ) : (
+              <RxHamburgerMenu className="text-4xl" />
+            )}
+          </button>
+        </div>
+        <div
+          className={`${
+            navOpen ? "block" : "hidden"
+          } md:flex md:items-center w-full md:w-auto`}
+        >
+          <ul className="text-md md:flex md:space-x-4 lowercase mt-4 md:mt-0 md:mb-4">
+            {navlinks.map((link) => (
+              <li key={link.title} className="py-2  md:py-0">
+                <Link
+                  href={link.path}
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-200 rounded-md"
+                >
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
     </div>
