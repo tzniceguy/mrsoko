@@ -8,7 +8,7 @@ export default function Input({ placeholder, type }: InputProps) {
     <input
       type={type}
       placeholder={placeholder}
-      className="outline-none rounded w-full p-2"
+      className="outline-none rounded w-full p-2 border-2"
     />
   );
 }

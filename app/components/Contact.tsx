@@ -29,9 +29,9 @@ export default function Contact() {
         <div>
           <div></div>
           <div className="space-y-5">
-            <h3>Kisauni, Zanzibar</h3>
+            <h3>Lubaga, Shinyanga</h3>
             <h3>Phone: +255 777 777 777</h3>
-            <h3>Email:mrsoko@gmail.com</h3>
+            <h3>Email:mrsoko@mrsoko.app</h3>
           </div>
         </div>
       </div>
