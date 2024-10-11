@@ -11,7 +11,7 @@ export default function HowItWorks() {
           Its that easy
         </h3>
         <div>
-          <Image src="/grocery.png" width={500} height={500} alt="grocery" />
+          <Image src="/fast-food.jpg" width={500} height={500} alt="grocery" />
         </div>
       </div>
       <div>

@@ -3,7 +3,7 @@ import MessageBox from "./Messagebox";
 
 export default function Contact() {
   return (
-    <div className="h-screen p-6">
+    <div className="h-full p-6">
       <h1 className="text-2xl md:text-4xl">
         Do you still have questions? Reach out to us for futher assistance we
         are here to help

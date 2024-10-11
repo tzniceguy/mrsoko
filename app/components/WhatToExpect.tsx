@@ -2,7 +2,7 @@ import Expectation from "./Expectation";
 
 export default function WhatToExpect() {
   return (
-    <div className="h-screen md:grid md:grid-cols-2 bg-sky-100 p-10 gap-2">
+    <div className="h-full md:grid md:grid-cols-2 bg-sky-100 p-10 gap-2">
       <div>
         <h2 className="text-2xl md:text-4xl font-semibold text-gray-400">
           What to expect with every order you make
