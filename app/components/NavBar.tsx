@@ -25,10 +25,10 @@ export default function NavBar() {
         <div>
           <Image
             className="dark:invert"
-            src="https://nextjs.org/icons/next.svg"
+            src="/groceries-round-svgrepo-com.svg"
             alt="Next.js logo"
-            width={140}
-            height={25}
+            width={60}
+            height={0}
             priority
           />
         </div>
@@ -38,13 +38,13 @@ export default function NavBar() {
               onClick={toggleNav}
               className={`absolute top-4 right-4 md:hidden ${navOpen ? "hidden" : "block"}`}
             >
-              <RxHamburgerMenu className="text-3xl" />
+              <RxHamburgerMenu className="text-4xl" />
             </button>
             <button
               onClick={toggleNav}
               className={`absolute top-6 right-4 md:hidden ${navOpen ? "block" : "hidden"}`}
             >
-              <IoCloseSharp className="text-3xl" />
+              <IoCloseSharp className="text-4xl" />
             </button>
           </div>
           <div
