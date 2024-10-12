@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
+import { ModeToggle } from "./toggle-theme";
 
 export default function NavBar() {
   //navigation bar links
@@ -15,24 +16,16 @@ export default function NavBar() {
   ];
 
   //toggle navigation bar
-  const [navOpen, isOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => {
-    isOpen(!navOpen);
+    setNavOpen(!navOpen);
   };
 
   return (
     <div className="relative">
       <nav className="md:flex items-center justify-between gap-4 border-b border-sky-100">
         <div className="flex items-center justify-between w-full md:w-auto">
-          <Image
-            className="dark:invert"
-            src="/groceries-round-svgrepo-com.svg"
-            alt="Next.js logo"
-            width={60}
-            height={0}
-            priority
-          />
           <button onClick={toggleNav} className="md:hidden text-4xl">
             {navOpen ? (
               <IoCloseSharp className="text-4xl" />
@@ -40,6 +33,14 @@ export default function NavBar() {
               <RxHamburgerMenu className="text-4xl" />
             )}
           </button>
+          <Image
+            className="dark:invert md:order-2"
+            src="/groceries-round-svgrepo-com.svg"
+            alt="Next.js logo"
+            width={60}
+            height={0}
+            priority
+          />
         </div>
         <div
           className={`${
@@ -48,7 +49,7 @@ export default function NavBar() {
         >
           <ul className="text-md md:flex md:space-x-4 lowercase mt-4 md:mt-0 md:mb-4">
             {navlinks.map((link) => (
-              <li key={link.title} className="py-2  md:py-0">
+              <li key={link.title} className="py-2 md:py-0">
                 <Link
                   href={link.path}
                   className="block px-4 py-2 text-gray-600 hover:bg-gray-200 rounded-md"
@@ -58,6 +59,9 @@ export default function NavBar() {
               </li>
             ))}
           </ul>
+          <div className="mt-4 md:mt-0 md:ml-4">
+            <ModeToggle />
+          </div>
         </div>
       </nav>
     </div>

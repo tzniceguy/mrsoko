@@ -7,7 +7,7 @@ import WhatToExpect from "./components/WhatToExpect";
 
 export default function Home() {
   return (
-    <main className="p-4 min-h-screen flex flex-col gap-4">
+    <main className="relative p-4 min-h-screen flex flex-col gap-4">
       <NavBar />
       <Hero />
       <HowItWorks />
